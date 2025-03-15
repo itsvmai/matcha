@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisk & Sip - Premium Matcha</title>
+    <link rel="stylesheet" href="matcha.css">
+	
+    <!-- Using Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+
+        <nav class="navbar">
+			<img src="Whisk2.png" alt="Wisk&sip" class="logo">
+            <ul class="nav-links">
+                <li><a href="matcha.html" class="active">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+				<li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+	<div id="products-container"></div>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Experience the Perfect Matcha</h1>
+                <p>Discover our premium selection of ceremonial grade matcha, carefully sourced from the finest tea farms in Japan.</p>
+				 <a href="product.html" id="load-products" class="cta-button">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- هذا هو المكان الذي سيتم فيه تحميل محتوى المنتجات -->
+    <div id="products-container"></div>
+</main>
+       
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Whisk & Sip is dedicated to bringing you the finest matcha tea, sourced directly from Japanese farms.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="matcha.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+					<li><a href="cart.html">Cart</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+<a href="https://www.instagram.com/whisknsip1?igsh=OWU0M3B3cHNxcjNh&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61574135788354" target="_blank" class="whiskandsipSip"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/whisknsip1?s=21" target="_blank"" class="whiskandsipSip"> <i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Whisk & Sip. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="matcha.js"></script>
+	<script src="cart.js"></script>
+	 <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize cart count from localStorage
+            const cartCount = localStorage.getItem('cartCount') || '0';
+            const cartCountElement = document.querySelector('.cart-count');
+            if (cartCountElement) {
+                cartCountElement.textContent = cartCount;
+            }
+        });
+    </script>
+</body>
+</html>

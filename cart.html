@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Whisk & Sip</title>
+<link rel="stylesheet" href="matcha.css">
+<link rel="stylesheet" href="cart.css">
+
+	    <link rel="stylesheet" href="cart.css">
+    <!-- Using Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+</head>
+
+</head>
+<body>
+    <header>
+
+<style>
+    header {
+        height: 100px !important;
+    }
+</style>
+
+        <nav class="navbar">
+		<img src="Whisk2.png" alt="Wisk&sip" class="logo">
+            <ul class="nav-links">
+                <li><a href="matcha.html" class="active">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+			    <li><a href="cart.html">Cart</a></li>
+
+				</ul>
+        </nav>
+    </header>
+
+    <main>
+		
+        <div class="container">
+            <section class="cart-section">
+                <h2>Your Shopping Cart</h2>
+                <div class="cart-container">
+                    <div class="cart-items">
+                        <div class="cart-table-container">
+                            <table class="cart-table">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Total</th>
+                                        <th>Remove</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cart-items">
+                                    <!-- Cart items will be loaded here dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cart-actions">
+                            <a href="product.html" class="continue-shopping">
+                                <i class="fas fa-arrow-left"></i> Continue Shopping
+                            </a>
+                            <button class="clear-cart" id="clear-cart">
+                                <i class="fas fa-trash"></i> Clear Cart
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="order-summary">
+                        <div class="summary-card">
+                            <h3>Order Summary</h3>
+                            <div class="summary-item">
+                                <span>Subtotal:</span>
+                                <span id="subtotal">0.00 SAR</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Shipping:</span>
+                                <span id="shipping">15.00 SAR</span>
+                            </div>
+                            <div class="summary-item total">
+                                <span>Total:</span>
+                                <span id="total">15.00 SAR</span>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-options">
+                            <h3>Payment Method</h3>
+                            <ul class="payment-list">
+    <li class="payment-method">
+        <img src="images/credit-card-icon-free-vector.jpg"  alt="Credit Card">
+        <span>Credit Card</span>
+    </li>
+    <li class="payment-method">
+       <img src="images/Paypal-Logo.png.webp" alt="PayPal">
+
+        <span>PayPal</span>
+    </li>
+    <li class="payment-method">
+        <img src="images/Apple%20Pay%20Logo.jpg" alt="Apple Pay">
+        <span>Apple Pay</span>
+    </li>
+    <li class="payment-method">
+        <img src="images/Delivery%20Man%20Courier%20Vector%20Design%20Images,%20Pay%20Cash%20On%20Delivery%20With%20Courier,%20Icon%20Cod,%20Free%20Shipping,%20Cash%20On%20Delivery%20PNG%20Image%20For%20Free%20Download.jpg" alt="Cash on Delivery">
+        <span>Cash on Delivery</span>
+    </li>
+</ul>
+
+                            </ul>
+                            <a href="cart.html" id="checkout-btn" class="cta-button">Proceed to Checkout</a>
+
+							
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Whisk & Sip is dedicated to bringing you the finest matcha tea, sourced directly from Japanese farms.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="matcha.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+					<li><a href="cart.html">Cart</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/whisknsip1?igsh=OWU0M3B3cHNxcjNh&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61574135788354" target="_blank" class="whiskandsipSip"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/whisknsip1?s=21" target="_blank"" class="whiskandsipSip"> <i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+		<footer>
+    <div class="social-links">
+
+       
+        
+    </div>
+</footer>
+
+            <p>&copy; 2024 Whisk & Sip. All rights reserved.</p>
+        </div>
+    </footer>
+ <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize cart count from localStorage
+            const cartCount = localStorage.getItem('cartCount') || '0';
+            const cartCountElement = document.querySelector('.cart-count');
+            if (cartCountElement) {
+                cartCountElement.textContent = cartCount;
+            }
+        });
+    </script>
+    <script src="matcha.js"></script>
+	<script src="cart.js"></script>
+	</body>
+</html>
